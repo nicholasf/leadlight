@@ -1,4 +1,4 @@
-Lightweight Data Framework (in Javascript)
+Leadlight - a lightweight data framework for Node.js.
 
 ![img](https://raw.github.com/nicholasf/leadlight/master/Karlstads_domkyrka_window_straight.JPG)
 
