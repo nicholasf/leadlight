@@ -1,0 +1,11 @@
+{
+  "name": "leadlight",
+  "version": "0.0.0",
+  "description": "Lightweight data/object mapping framework. Wrap any persistence system with domain model functionality.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
