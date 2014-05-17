@@ -1,5 +1,7 @@
 Lightweight Data Framework (in Javascript)
 
+![comms](https://raw.github.com/nicholasf/leadlight/master/Karlstads_domkyrka_window_straight.JPG)
+
 Wrap *any* persistence system with domain model functionality.
 
 This means:
