@@ -1,6 +1,25 @@
 Leadlight - a lightweight data framework for Node.js.
 
+Wrap *any* persistence system with domain model functionality.
+
 ![img](https://raw.github.com/nicholasf/leadlight/master/Karlstads_domkyrka_window_straight.JPG)
+
+
+# Usage
+
+### Begin a scheme (a datastore)
+
+```
+var leadlight = require('leadlight');
+db1 = leadlight.scheme('database1');
+
+
+
+
+```
+
+
+# Planning Document
 
 Wrap *any* persistence system with domain model functionality.
 
