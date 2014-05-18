@@ -13,11 +13,32 @@ Wrap *any* persistence system with domain model functionality.
 var leadlight = require('leadlight');
 db1 = leadlight.scheme('database1');
 
-
+var Person = new db1.Model('Person', 'people'); 
 
 
 ```
 
+Develop DSL and show: 
+* how to create two models in the same schema
+* how to relate them in a hasMany
+* how to craft a query for them
+
+
+the handler has to:
+
+listen for the generic events emitted from the model - e.g. ll_find
+then it needs to pass them onto specific handlers for the collection.
+
+handler.finders.push('person', function(){});
+handler.finders.push('house', function(){});
+
+Person.find( { id: n, with: ['House'] })
+ 
+handler.finders.push('person_with_house', function(args) {
+    console.log(args);
+});
+
+> { id: n }
 
 # Planning Document
 

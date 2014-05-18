@@ -5,7 +5,11 @@ var expect      = require('chai').expect,
 var memoryDB    = {};
 memoryDB.people = {
     1: { name: 'fred' }
-}
+};
+
+memoryDB.homes = {
+    1: { address: '101, Somewhere Lane, Riverside' }
+};
 
 leadlight.on('ll_find', function(args) {
     if (args.collection === 'people') {
@@ -13,7 +17,6 @@ leadlight.on('ll_find', function(args) {
         leadlight.emit('ll_find_reply', person);
     }
 });
-
 
 describe('Model behaviours', function(){
     var Person;
@@ -29,4 +32,22 @@ describe('Model behaviours', function(){
             done();
         });
     });
+});
+
+describe('More than one Model', function() {
+    var Person, House;
+
+    beforeEach(function() {
+        Person = new Model('Person', 'people');
+        House = new Model('House', 'homes');
+    });
+
+    it('finds a person', function(done){
+        var person;
+        Person.find( { id: 1 }, function(err, person) {
+            expect(person).to.be.ok;
+            done();
+        });
+    });
+
 });
