@@ -29,6 +29,7 @@ the handler has to:
 listen for the generic events emitted from the model - e.g. ll_find
 then it needs to pass them onto specific handlers for the collection.
 
+```
 handler.finders.push('person', function(){});
 handler.finders.push('house', function(){});
 
@@ -39,6 +40,7 @@ handler.finders.push('person_with_house', function(args) {
 });
 
 > { id: n }
+```
 
 # Planning Document
 
